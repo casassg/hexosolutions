@@ -1,0 +1,97 @@
+---
+---
+
+/* ---- reset ---- */
+
+@import "../_sass/mixins";
+
+
+body {
+  margin: 0;
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0093AF;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.svg-wrapper {
+  margin-top:0;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 20px;
+
+  svg {
+    @include box-shadow(0px 2px 8px 3px rgba(0, 0, 0, 0.2));
+  }
+
+  #shape {
+    stroke-width: 6px;
+    fill: rgba(black,0.8);
+    stroke: #C11760;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+  }
+
+  &:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 6px;
+    stroke-dashoffset: 0;
+    stroke: #fff;
+  }
+  #text {
+    margin-top: -35px;
+    text-align: center;
+  }
+
+  #text a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.7em;
+  }
+}
+
+
+
+
+
+#content {
+  img {
+    max-width: 80%;
+    padding: 20px;
+    max-height: 30vh;
+  }
+  h1{
+      font-family:  'Syncopate', sans-serif;
+      padding: 20px;
+  }
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+}
+
