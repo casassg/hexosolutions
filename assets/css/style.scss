@@ -5,10 +5,27 @@
 
 @import "../_sass/mixins";
 
+$bg-color: #ececec;
+$accent-color: #00a09a;
+
+* {
+  margin: 0;
+}
+
+@font-face {
+  font-family: Averta;
+  src: url('../fonts/Averta.otf');
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
 body {
   margin: 0;
-  font:normal 75% Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 300;
 }
 
 canvas {
@@ -19,15 +36,14 @@ canvas {
 /* ---- particles.js container ---- */
 
 #particles-js {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #0093AF;
+  background-color: $accent-color;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
@@ -50,10 +66,10 @@ canvas {
 
   #shape {
     stroke-width: 6px;
-    fill: rgba(black,0.8);
-    stroke: #C11760;
-    stroke-dasharray: 85 400;
-    stroke-dashoffset: -220;
+    fill: rgba(darken($accent-color,30%),0.8);
+    stroke: $bg-color;
+    stroke-dasharray: 150 400;
+    stroke-dashoffset: -190;
     transition: 1s all ease;
   }
 
@@ -61,7 +77,7 @@ canvas {
     stroke-dasharray: 50 0;
     stroke-width: 6px;
     stroke-dashoffset: 0;
-    stroke: #fff;
+    stroke: lighten($accent-color, 10%);
   }
   #text {
     margin-top: -35px;
@@ -72,7 +88,7 @@ canvas {
     color: white;
     text-decoration: none;
     font-weight: 100;
-    font-size: 1.7em;
+    font-size: 1em;
   }
 }
 
@@ -81,17 +97,19 @@ canvas {
 
 
 #content {
+  width: 100%;
+  height: 100%;
+
   img {
-    max-width: 80%;
+    margin: auto;
+    height: 40vh;
     padding: 20px;
-    max-height: 30vh;
-    padding-top: 20vh;
+    padding-top: 15vh;
   }
-  h1{
-      font-family:  'Syncopate', sans-serif;
+  h1,h2,h3,h4 {
+      font-family:  'Averta', sans-serif;
       padding: 20px;
   }
-  font-family: 'Roboto', sans-serif;
   color: white;
   text-align: center;
 }

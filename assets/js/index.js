@@ -1,5 +1,7 @@
 /* ---- particles.js config ---- */
 
+var color =  "#ececec";
+
 particlesJS('particles-js', {
   'particles': {
     'number': {
@@ -10,13 +12,13 @@ particlesJS('particles-js', {
       }
     },
     'color': {
-      'value': '#ffffff'
+      'value': color
     },
     'shape': {
       'type': 'hexagon',
       'stroke': {
         'width': 0,
-        'color': '#000000'
+        'color': color
       },
       'polygon': {
         'nb_sides': 6
@@ -45,7 +47,7 @@ particlesJS('particles-js', {
     'line_linked': {
       'enable': true,
       'distance': 150,
-      'color': '#ffffff',
+      'color': color,
       'opacity': 0.4,
       'width': 1
     },
